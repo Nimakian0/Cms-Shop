@@ -1,0 +1,165 @@
+
+
+#cartItemBox{
+    border: 1px solid #e0e0e2;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 72vh; /* 464px */
+    overflow-y: scroll;
+    margin-left: 15px;
+}
+#cartItemBox::-webkit-scrollbar {
+    display: none;
+}
+.cartitem{
+    display: flex;
+    padding: 15px 0 40px 0;
+    border-bottom: 1px solid #e0e0e2;
+}
+.cartitemRight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.SrcProduct{
+    width: 115px;
+    height: 115px;
+}
+.srcGroceries{
+    width: 65px;
+    margin: 17px 0;
+}
+.managementProductCart{
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0px 1px 5px rgba(0,0,0,.2);
+    --tw-shadow-colored: 0px 1px 5px var(--tw-shadow-color);
+}
+.plusProductInCart{
+    cursor: pointer;
+}
+.NumberInputInCart{
+    /* padding: 0 25px; */
+    margin: 0;
+    padding: 2px 10px;
+    color: #ef4056;
+    font-weight: bold;
+}
+.minusProductInCart{
+    cursor: pointer;
+}
+
+
+.cartitemLeft{
+    margin-right: 10px;
+}
+.Warranty{
+    display: flex;
+    align-items: center;
+}
+.Warranty > p{
+    color: #62666d;
+    font-size: 13px;
+    margin: 3px 7px 3px 0;
+}
+.Company{
+    display: flex;
+    align-items: center;
+}
+.Company > p {
+    color: #62666d;
+    font-size: 13px;
+    margin: 3px 7px 3px 0;
+}
+.cellar{
+    display: flex;
+    align-items: center;
+}
+.cellar > p {
+    color: #62666d;
+    font-size: 13px;
+    margin: 3px 7px 3px 0;
+}
+
+.FastSending{
+    display: flex;
+    align-items: center;
+}
+.FastSending > p {
+    color: #62666d;
+    font-size: 13px;
+    margin: 3px 7px 3px 0;
+}
+.DiscountBoxCart{
+    width: fit-content;
+    font-size: 12px;
+    color: #ef394e;
+    display: flex;
+    align-items: baseline;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.DiscountText{
+    margin-left: 5px;
+}
+.priceProducr{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #23254e;
+    margin-right: 10px;
+}
+.priceText{
+    margin: 15px 5px;
+}    
+
+
+.Box-is-Accept-Product{
+    display: flex;
+    align-items: center;
+}
+.Box-is-Accept-Product> p{
+    margin: 0;
+}
+.Result-Accept-Product{
+    margin-right: 5px !important;
+}
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    #cartItemBox{
+        overflow: unset;
+        max-height: fit-content;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .cartitem{
+        flex-direction: column;
+    }
+    .cartitemRight{
+        flex-direction: row;
+        justify-content:center;
+    }
+    .srcGroceries{
+        padding: 0 20px;
+    }
+    .Profilecontent{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .boxProfile{
+        width: 95%;
+    }
+    
+}

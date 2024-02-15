@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: 'iranykan';
+    src: url('@../Font/Yekan.eot') format('eot'),
+    url('../Font/Yekan.woff') format('woff'),
+    url('../Font/Yekan.svg') format('svg'),
+    url('../Font/Yekan.ttf') format('ttf');
+}
+
+body{
+    width: 100%;
+    direction: rtl;
+    font-family: "iranykan";
+    overflow: hidden;
+}
+
+
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.scroll-top-animation {
+    animation: scrollAnimation 1s ease-out forwards;
+}

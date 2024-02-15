@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/AllowAccess.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="css/AddStory.css">
+</head>
+
+<body>
+
+    <div class="boxProfile">
+        <menu-admin></menu-admin>
+
+        <div class="Profilecontent">
+
+            <div id="AddStory">
+                <div id="BoxBtnAddStore">
+                    <p id="BtnAddStore">ایجاد استوری</p>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <div id="ContentAddStory">
+                    <div id="TextContentAddStory">
+                        <input id="inputTextContentAddStory" type="text" placeholder="عنوان استوری">
+                    </div>
+                    <div id="ImgContentAddStory">
+                        <div id="BoxImgIconeContentAddStory">
+                            <p>ایکون استوری:</p>
+                            <div id="ImgIconeContentAddStory">
+                                <i class="fa-solid fa-image"></i>
+                                <p id="TetxImgIconeContentAddStory">عکس محصول</p>
+                                <input id="inputImgIconeContentAddStory" type="file">
+                            </div>
+                        </div>
+                        <div id="BoxImgSrcContentAddStory">
+                            <p>محتوای استوری:</p>
+                            <div id="ImgSrcContentAddStory">
+                                <i class="fa-solid fa-image"></i>
+                                <p id="TextImgSrcContentAddStory">عکس محصول</p>
+                                <input id="InputImgSrcContentAddStory" type="file">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ErorAddStory">
+                      
+                    </div>
+
+                    <div id="BoxSubAndExit">
+                        <button id="SubAddStory">ساخت استوری</button>
+                        <button id="ExitAddStory">لغو</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h3>لیست استوری ها:</h3>
+
+            <div id="StoryContent">
+                
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="../../js/DefaltData.js"></script>
+    <script type="module" src="js/AddStory.js" defer></script>
+    
+</body>
+
+</html>

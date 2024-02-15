@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prodoct.css">
+</head>
+<body>
+    
+    <script src="components/BeforeLoad/BeforeLoad.js"></script>
+    <before-load></before-load>
+
+    <main-header></main-header>
+
+    <div id="locationTop">
+        <a href="index.html">فروشگاه اینترنتی دیجی کالا</a>
+        <a>/</a>
+        <a href="groceries.html">کالا های سوپر مارکتی</a>
+        <a>/</a>
+        <a href="" id="locationproduct" >تست</a>
+    </div>
+
+
+
+
+
+    <div id="contentproduct">
+
+        <div id="imgDescriptionBoxproduct"> 
+
+            <div id="imgproductBox">
+                <img id="imgproduct" src="" alt="">
+            </div>
+            
+    
+    
+            <div id="DescriptionProduct">
+                <h2 id="nameProduct"></h2>
+                
+                <div id="starProduct">
+                    <i class="fa-solid fa-star ScoreSvg" style="color: #f9bc00;"></i>
+                    <p id="TextstarProduct"></p>
+                </div>
+    
+                <div id="ProposalProduct">
+                    <i class="fa-solid fa-thumbs-up" style="color: #4caf50;"></i>
+                    <p>۸۳% (۱۰ نفر) از خریداران، این کالا را پیشنهاد کرده‌اند</p>
+                    <i class="fa-solid fa-circle-exclamation" style="color: #a1a3a8;"></i>
+                </div>
+    
+    
+    
+    
+                <div id="AttributeProduct">
+    
+                    <h3>ویژگی ها</h3>
+    
+                    <div id="AttributeProductItemBox">
+                        <div class="AttributeProductItem">
+                            <i class="fa-solid fa-circle circle" style="color: #a1a3a8;"></i>
+                            <p class="AttributeProductItemText">نوع ویتامین و مواد معدنی :</p>
+                            <p>پتاسیم، سدیم</p>
+                        </div>
+                        <div class="AttributeProductItem">
+                            <i class="fa-solid fa-circle circle" style="color: #a1a3a8;"></i>
+                            <p class="AttributeProductItemText">موارد استفاده :</p>
+                            <p>سالاد و پخت و پز</p>
+                        </div>
+                    </div>
+    
+    
+                    <div id="returnedText">
+                        <i class="fa-solid fa-circle-exclamation" style="color: #81858b;"></i>
+                        <p>درخواست مرجوع کردن کالا در گروه ماکارونی، اسپاگتی و فتوچینی با دلیل "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده باشد).</p>
+    
+                    </div>
+    
+    
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+        
+
+
+
+
+
+
+
+        <div id="BoxAddCart">
+            <h4 id="Seller">فروشنده</h4>
+
+            <div id="NameSeller">
+                <img src="img/com.digikala.webp" alt="">
+                <p>دیجی کالا</p>
+            </div>
+
+            <div id="OpinionSeller">
+                <p style="color: #65aa57; margin-left: 5px;">89.6%</p>
+                <p style="color: #81858b;">رضایت از کالا</p>
+                <p style="padding: 0 10px;">|</p>
+                <p style="color: #81858b; margin-left: 5px">عملکرد</p>
+                <p style="color: #65aa57;">عالی</p>
+            </div>
+
+            <div id="Warranty">
+                <i class="fa-solid fa-shield" style="color: #424750;"></i>
+                <p>گارانتی اصالت و سلامت فیزیکی کالا</p>
+            </div>
+
+            <div id="BestPrice">
+                <i class="fa-solid fa-circle-exclamation" style="color: #2e7b32;margin-left: 10px;"></i>
+                <p>بهترین قیمت در ۳۰ روز گذشته</p>
+            </div>
+
+
+
+            <div id="PriceFakeBox">
+                <div style="background-color: #ef394e;" class="DiscountBox">
+                    <p class="Discount"></p>
+                </div>
+                <p id="FakePrice"></p>
+            </div>
+
+
+            <div id="PriceProduct">
+                <p id="PriceProductText"></p>
+                <p>تومان</p>
+            </div>
+
+
+
+            <br>
+            <div id="AddCartfalse">
+                <p id="AddCartfalseText">افزودن به سبد خرید</p>
+            </div> 
+
+
+
+            <div id="AddCartTrue">
+                <div id="inputBoxAddCartTrue">
+                    <img class="plusProduct" src="img/plus-solid.svg" alt="">
+                    <p class="NumberInput"></p>
+                    <img class="minusProduct" style="width: 14px;" src="img/noun-trash-1825564.svg" alt="">
+                </div>
+                <div id="ShowCart">
+                    <p id="">مشاهده</p>
+                    <a id="ShowCartHref" href="cart.html">سبد خرید</a>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <main-footer></main-footer>
+
+
+
+
+
+
+    <script src="js/DefaltData.js"></script>
+    <script type="module" src="js/product.js" defer></script>
+</body>
+</html>

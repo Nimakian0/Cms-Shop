@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'iranykan';
+    src: url('@../../Font/Yekan.eot') format('eot'),
+    url('../../Font/Yekan.woff') format('woff'),
+    url('../../Font/Yekan.svg') format('svg'),
+    url('../../Font/Yekan.ttf') format('ttf');
+}
+
+
+body{
+    direction: rtl;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "iranykan";
+}
+
+#boxSingUp{
+    width: 380px;
+    height: 500px;
+    border: 1px solid #e0e0e2;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.formSingUp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textSingUpPage{
+    margin: 0;
+}
+
+.inputBox{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ef4056;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inputBox>input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    font-family: "iranykan";
+    font-size: 16px;
+    margin: 0 10px;
+}
+.inputBox>input::placeholder{
+    font-size: 17px;
+}
+.inputBox>i{
+    background-color: #fff;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    color: #c81414;
+}
+
+.error{
+    width: 90%;
+}
+.error>p{
+    margin: 0;
+    color: #f05656;
+}
+.error>span{
+    margin: 0;
+    color: #47ad18;
+}
+
+
+#subSingUpUser{
+    width: 90%;
+    padding: 10px 0;
+    font-family: "iranykan";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #ef4056;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 3px;
+}
+.formSingUp>p>a{
+    text-decoration: none;
+    padding: 5px;
+}
+.showPassword{
+    cursor: pointer;
+}
+
+
+
+
+/*LoginFormstart */
+/* یک سری استایل رو از فرم ثبت نام گرفته مثل  اینپوت ها */
+
+#boxLogin{
+    width: 380px;
+    height: 500px;
+    border: 1px solid #e0e0e2;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.formLogin{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textLoginPage{
+    margin: 0;
+}
+
+.formLogin>p>a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+#subLoginUser{
+    width: 90%;
+    padding: 10px 0;
+    font-family: "iranykan";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #ef4056;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+
+
+@media only screen and (max-width: 425px) {
+    #boxSingUp{
+        width: 90%;
+    }
+    #boxLogin{
+        width: 90%;
+    }
+}

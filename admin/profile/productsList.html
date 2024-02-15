@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/AllowAccess.js"></script>
+    <link rel="stylesheet" href="css/productsList.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="boxProfile">
+        <menu-admin></menu-admin>
+
+        <div class="Profilecontent">
+            
+            <div id="AddGroceriesBox">
+                <div id="AddGroceriesBtn">
+                    <p>افزودن محصول</p>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <div id="ContentAddGroceries">
+                    <form id="FormContentAddGroceries" action="" onclick="">
+                        <input id="NameAddGroceries" type="text" placeholder="نام محصول">
+
+                        <input type="text" id="priceAddGroceries" placeholder="قیمت محصول">
+
+                        <label for="">در صورت نداشتن تخفیف مقدار را خالی بگذارید!</label>
+                        <input id="DiscountAddGroceries" type="text" placeholder="درصد تخفیف">
+
+                        <div id="ShippingMethod">
+                            <label for="">ارسال: </label>
+                            <input type="radio" class="RadioShippingMethod" name="ShippingMethod" value="ارسال فردا" checked>  فردا
+                            <input type="radio" class="RadioShippingMethod" name="ShippingMethod" value="ارسال فروشنده">  فروشنده
+                            <input type="radio" class="RadioShippingMethod" name="ShippingMethod" value="ارسال سریع سوپر مارکتی">  سریع سوپر مارکتی
+                        </div>
+                        <input type="number" id="StarAddGroceries" placeholder="1-5 امتیاز محصول" min="0" max="5">
+
+                        <div id="photoAddGroceries">
+                            <input id="SrsPhotoAddGroceries" type="file" accept="image/*"> 
+                            <div id="photoAddGroceriesBtn">
+                                <i class="fa-solid fa-image"></i>
+                                <p id="TextPhotoAddGroceriesBtn">عکس محصول</p>
+                            </div>
+                        </div>
+                        
+                        <div id="ErorBox">
+
+                        </div>
+
+                        <div id="BoxSubAddGroceries">
+                            <button id="SubAddGroceries">ساخت محصول</button>
+                            <button id="CancellAddGroceries">لغو</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+
+            <h3>لیست محصولات :</h3>
+
+            <div id="containerGroceries">
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+
+
+
+
+    
+    <script src="../../js/DefaltData.js"></script>
+    <script type="module" src="js/productsList.js"></script>
+
+    
+
+</body>
+</html>

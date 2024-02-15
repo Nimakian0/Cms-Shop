@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'iranykan';
+    src: url('@../../../../../Font/Yekan.eot') format('eot'),
+    url('../../../../../Font/Yekan.woff') format('woff'),
+    url('../../../../../Font/Yekan.svg') format('svg'),
+    url('../../../../../Font/Yekan.ttf') format('ttf');
+}
+
+body{
+    direction: rtl;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 0;
+    padding: 30px 0;
+    box-sizing: border-box;
+    font-family:"iranykan" ;
+}
+
+.boxProfile{
+    width: 90%;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.Profilecontent{
+    width: 100%;
+    margin-right: 20px;
+    padding-right: 330px;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .Profilecontent{
+        padding: 25px 0 0 0 ;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Profilecontent{
+        margin: 0;
+    }
+
+}

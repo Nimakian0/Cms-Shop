@@ -1,0 +1,200 @@
+#BoxNewTicket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; 
+}
+#ShowAddNewTicket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+#BoxContentNewTickets{
+    height: 0;
+    transition: all 1s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.BoxInputTickets{
+    width: 80%;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.BoxInputTickets > label{
+   
+}
+#SubjectTickets {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: "iranykan";
+    font-size: 16px;
+    border: 2px solid #ef4056;
+    border-radius: 10px;
+}
+
+
+#textTicket{
+    width: 100%;
+    box-sizing: border-box;
+    height: 170px;
+    border: 2px solid #ef4056;
+    border-radius: 25px 0;
+    font-family: "iranykan";
+    font-size: 18px;
+    padding: 8px;
+    resize: none;
+}
+#textTicket:focus {
+    outline:none;
+    border-color: #ef4056 ;
+}
+
+
+
+#EroorBox{
+    width: 80%;
+    margin: 15px  auto 0px auto;
+    display: none;
+}
+#EroorBox> p{
+    color: red;
+    margin:0;
+}
+
+
+
+#SubAndExitNewTicket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#SubNewTicket{
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px
+}
+#ExitNewTicket{
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+
+#AllTicket{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.ItemTicket{
+    width: 80%;
+    height: 70px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #141E46;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+.TextItemTicket{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.idtextSubjectTickets{
+    margin: 0;
+    color: #ccc;
+    font-size: 16px;
+}
+.textSubjectTickets{
+    margin: 0 10px 0 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.StatusItemTicketTrue{
+    padding:2px 20px;
+    background-color: #1e5716;
+    border-radius: 8px;
+    color: #fff;
+}
+.StatusItemTicketFalse{
+    padding:2px 20px;
+    background-color: #af1f1f;
+    border-radius: 8px;
+    color: #fff;
+}
+.TextStatusItemTicket{
+    margin: 0;
+}
+
+
+.EmptyTicket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.EmptyTicket > h4{
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 425px) {
+    .ItemTicket{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .ItemTicket{
+        padding: 0 10px;
+    }
+}

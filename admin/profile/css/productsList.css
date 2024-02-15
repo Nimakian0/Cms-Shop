@@ -1,0 +1,285 @@
+#AddGroceriesBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+}
+#AddGroceriesBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 112px;
+    cursor: pointer;
+}
+#ContentAddGroceries{
+    background-color: #00000008;
+    height: 0; 
+    width: 100%;
+    display: block;
+    z-index: -1;
+    overflow: hidden;
+    transition: all 1s;
+}
+#FormContentAddGroceries{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+#FormContentAddGroceries>input{
+    width: 200px;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    font-family: "iranykan";
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #9f9f9f;
+}
+
+
+#ShippingMethod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ShippingMethod>label{
+    margin-left: 40px;
+}
+#ShippingMethod>input{
+    margin-right: 15px;
+}
+
+#photoAddGroceries{
+    height: fit-content;
+    position: relative;
+    margin: 10px 0;
+}
+#SrsPhotoAddGroceries{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+#photoAddGroceriesBtn{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border: 1px solid #777777;
+    padding: 5px;
+}
+#TextPhotoAddGroceriesBtn{
+    margin-right: 10px;
+}
+
+#ErorBox > p {
+    color: red;
+    margin: 2px;
+}
+#ErorBox > span{
+    color: green;
+}
+
+
+
+#BoxSubAddGroceries{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    width: 135px;
+}
+#SubAddGroceries{
+    padding: 8px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+#CancellAddGroceries{
+    padding: 8px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#containerGroceries{
+    width: 100%;
+    padding: 30px 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.GroceriesItem{
+    width: 337px;
+    height: 600px;
+    text-decoration: none;
+    border: 1px solid #cfcfcf50;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.SpecialSellBoxGroceriesItem{
+    width: 60px;
+    height: 32px;
+}
+
+
+.imgGroceriesItem{
+    margin: auto;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.srcGroceriesItem{
+    width: 240px;
+    height: 240px;
+}
+.nameGroceriesItem{
+    font-size: 13px;
+    color: #3f4064;
+    padding: 15px 0;
+}
+
+
+.ScoreSeller{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.Seller{
+    display: flex;
+    align-items: center;
+}
+.SellerSvg{
+    width: 16px;
+    color: #1028ff;
+}
+.SellerText{
+    font-size: 13px;
+    color: #62666d;
+    font-weight: 100;
+    margin-right: 5px;
+}
+.Score{
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ScoreText{
+    font-size: 14px;
+    color: #3f4064;
+}
+
+.ScoreSvg{
+    font-size: 13px;
+}
+
+
+.DiscountPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+}
+
+
+
+.Price{
+    
+}
+.PriceText{
+    color: #3f4064;
+    font-weight: bold;
+}
+
+.DiscountBox{
+    width: 20px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+    padding: 0 12px;
+}
+.Discount{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: fit-content;
+}
+.PriceTextFake{
+    text-decoration-line: line-through;
+    color: #c0c2c5  ;
+    font-size: 13px;
+    font-weight: 500;
+    float: left ;
+}
+.Delete-Product{
+    padding: 3px 8px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-family: "iranykan";
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #cf0a0a;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 540px) {
+    .Profilecontent{
+        /* margin-right: 10px !important; */
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Profilecontent{
+        margin-top: 30px !important;
+    }
+}

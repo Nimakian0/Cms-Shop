@@ -1,0 +1,95 @@
+#SearchUser{
+    width: fit-content;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #1e8b0b8e;
+
+
+}
+#inputSearchUser{
+    padding: 8px;
+    outline: none;
+    color: #333;
+    font-size: 15px;
+    border: none;
+}
+#SubSearch{
+    border: none;
+    background-color: #29c00f;
+    font-size: 17px;
+    font-family: "iranykan";
+    color: #141E46;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+#SubSearch>i{
+    font-size: 17px;
+    margin-right: 7px;
+}
+
+
+
+#boxUsers{
+    margin-top: 50px;
+}
+
+#ulUsers{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    box-shadow: 0px 0 5px 2px #ccc;
+    border-radius: 5px;
+}
+#ulUsers > li {
+    border-bottom: 1px solid #CCC;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.UserNameText{
+    margin: 0;
+}
+.BoxBlockUpgradeUser{
+    
+}
+.BtnBlockUser{
+    width: 125px;
+    height: 43px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'iranykan';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.BlockUserColortrue{
+    background-color: #1e8b0b;
+}
+.BlockUserColorfalse{
+    background-color: #c81414;
+}
+
+
+#boxPagingUsers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.BtnPagingUsers{
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #141E46;
+    color: #fff;
+    cursor: pointer;
+}

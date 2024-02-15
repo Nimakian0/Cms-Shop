@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/AllowAccess.js"></script>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/AccountDetails.css">
+</head>
+<body>
+    
+
+
+    <div class="boxProfile">
+        <menu-user></menu-user>
+
+        <div class="Profilecontent">
+            
+            
+            <div id="BoxAccountDetails">
+
+                <h4>ویرایش حساب کاربری</h4>
+
+                <div class="containerInput">
+                    <label for="">نام کاربری</label>
+                    <div id="BoxInputUserName"  class="BoxInputAndI">
+                        <input class="input" id="UserName" type="text" >
+                        <i class="fa-regular fa-user i"></i>
+                    </div>
+                </div>
+
+                <div class="containerInput">
+                    <label for="">رمز عبور</label>
+                    <div class="BoxInputAndI" id="BoxPassword">
+                        <input class="input" id="Password" type="password" >
+                        <i onclick="showPassword(event)" class="fa-regular fa-eye-slash showPassword i"></i>
+                    </div>
+                </div>
+                    
+                <div class="containerInput">
+                    <label for="">تکرار رمز عبور</label>
+                    <div class="BoxInputAndI" id="BoxRepeatPassword">
+                        <input class="input" id="RepeatPassword" type="password">
+                        <i onclick="showPassword(event)" class="fa-regular fa-eye-slash showPassword i"></i>
+                    </div>
+                </div>
+                    
+                <div id="BoxEroor">
+                   
+                </div>
+
+                <div id="BoxSubAndExit">
+                    <button id="SubAccountDetails">ثبت تغیرات</button>
+                    <button id="CancellAccountDetails">لغو</button>
+                </div>
+            </div>
+
+            
+
+          
+
+        </div>
+            
+          
+    </div>
+
+
+
+
+
+
+
+    <script type="module" src="js/AccountDetails.js"></script>
+
+</body>
+
+
+
+</html>

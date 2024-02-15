@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+</head>
+<body>
+
+    <script src="components/BeforeLoad/BeforeLoad.js"></script>
+    <before-load></before-load>
+    
+
+    <main-header></main-header>
+    
+    
+
+
+    <div id="boxCart">
+
+        <div id="cartItemBox">
+
+            <!-- <div class="cartitem">
+
+                <div class="cartitemRight">
+                    <a href="?id="><img class="SrcProduct" src="img/groceries/5.webp"></a>
+                    <img class="srcGroceries" src="img/groceries/SpecialSell.svg">
+
+                    <div class="managementProductCart">
+                        <img class="plusProductInCart" src="img/plus-solid.svg" alt="">
+                        <p class="NumberInputInCart">10</p>
+                        <img class="minusProductInCart" style="width: 14px;" src="img/minus-solid.svg" alt="">
+                    </div> 
+                </div>
+
+                <div class="cartitemLeft">
+                    <p>روغن آفتابگردان حاوی توکوفرول غنچه پلاس - 900 میلی لیتر</p>
+                    <div class="Warranty">
+                        <i class="fa-solid fa-shield" style="color: #a1a3a8;"></i>
+                        <p>گارانتی اصالت و سلامت فیزیکی کالا</p>
+                    </div>
+                    <div class="Company">
+                        <i class="fa-regular fa-building" style="color: #62666d;"></i>
+                        <p>دیجی‌کالا</p>
+                    </div>
+                    <div class="cellar">
+                        <i class="fa-solid fa-warehouse" style="color: #19bfd3;font-size: 12px;"></i>
+                        <p>موجود در انبار دیجی‌کالا</p>
+                    </div>
+                    <div class="FastSending">
+                        <i class="fa-solid fa-circle circle" style="color: #19bfd3;"></i>
+                        <img style="margin: 0 7px;width: 15px;" src="img/groceries/truck-solid.svg" alt="">
+                        <p>ارسال سریع سوپرمارکتی دیجی‌کالا</p>
+                    </div>
+
+                    <div class="DiscountBoxCart">
+                        <p class="DiscountText">7.000</p>
+                        <p>تومان تخفیف</p>
+                    </div>
+
+                    <div class="priceProducr">
+                        <p class="priceText">43.800</p>
+                        <p>تومان</p>
+                    </div>
+
+                </div>
+                
+
+            </div> -->
+
+            
+
+            
+
+        </div>
+
+
+
+        <div id="paymentBox">
+            <div id="payment">
+                
+                <div id="PriceAllProduct">
+                    <div id="PriceAllProductText">
+                        <p>قیمت کالا ها</p>
+                        <p id="NumberAllProducts"></p>
+                    </div>
+
+                    <div id="PriceAllProductNumber">
+                        <p id="textPriceAllProductNumber" style="font-weight: 700;margin-left: 3px;"></p>
+                        <p>تومان</p>
+                    </div>
+                </div>
+
+
+
+                <div id="PriceCart">
+                    <p>جمع سبد خرید</p>
+
+                    <div id="PriceCartNumber">
+                        <p id="SumCartProduct" style="font-weight: 700;margin-left: 3px;"></p>
+                        <p>تومان</p>
+                    </div>
+
+                </div>
+
+
+
+                <div id="ProfitFromPurchase">
+                    <p>سود شما از خرید</p>
+
+                    <div id="ProfitFromPurchaseNumber">
+                        <p id="SumAllDiscountCart" style="font-weight: 700;margin-left: 3px;"></p>
+                        <p>تومان</p>
+                    </div>
+
+                </div>
+
+                <a id="Recordorder">
+                    <p>ثبت سفارش</p>
+                </a>
+                <div id="errboxCart">
+                    <p>برای ثبت سفارش ابتدا وارد حساب کاربری خود شوید</p>
+                </div>
+                
+                <div id="DjClubBox">
+                    <div id="DjClubText">
+                        <img src="img/club-point.svg">
+                        <p style="padding: 0 6px;color: #62666d;">دیجی کلاب</p>
+                        <i class="fa-solid fa-circle-exclamation" style="color: #a1a3a8;"></i>
+
+                    </div>
+
+                    <div id="DjClubNumber">
+                        <p>22</p>
+                        <p style="padding-right: 3px;font-size: 12px;">امتیاز</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            
+            <p id="unpaid">هزینه این سفارش هنوز پرداخت نشده‌ و در صورت اتمام موجودی، کالاها از سبد حذف می‌شوند</p>
+
+        </div>
+
+
+    </div>
+
+    <div id="SuccessMessage">
+        <p>سفارش شما با موفقیت ثبت شد :)</p>
+    </div>
+
+
+    <div id="Emptycart">
+        <img src="img/empty-cart.svg">
+        <p>سبد خرید شما خالی است!</p>
+    </div>
+
+    
+    
+    
+    <main-footer></main-footer>
+
+
+    
+    <script src="js/DefaltData.js"></script>
+    <script type="module" src="js/cart.js" defer></script>
+
+    
+</body>
+</html>
