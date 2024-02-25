@@ -1,81 +1,86 @@
-#SearchUser{
-    width: fit-content;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: stretch;
-    border: 2px solid #1e8b0b8e;
-
-
-}
-#inputSearchUser{
-    padding: 8px;
-    outline: none;
-    color: #333;
-    font-size: 15px;
-    border: none;
-}
-#SubSearch{
-    border: none;
-    background-color: #29c00f;
-    font-size: 17px;
-    font-family: "iranykan";
-    color: #141E46;
-    padding: 3px 8px;
-    cursor: pointer;
-}
-#SubSearch>i{
-    font-size: 17px;
-    margin-right: 7px;
-}
-
-
-
 #boxUsers{
     margin-top: 50px;
-}
-
-#ulUsers{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid #CCC;
-    box-shadow: 0px 0 5px 2px #ccc;
+    background: #fff;
     border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 40px rgba(110,134,216,.1);
 }
-#ulUsers > li {
-    border-bottom: 1px solid #CCC;
-    padding: 12px;
+#HeaderboxUsers{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #EDEDED;
 }
+#HeaderboxUsers > h3 {
+    margin: 0;
+}
+#HeaderboxUsers > a {
+    padding: 6px 12px;
+    background-color: #2DCEA2 ;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+#HeaderboxUsers > a i {
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+
+
+#SubjectTable{
+    width: 100%;
+    padding: 25px 0 5px 0;
+}
+#SubjectTable > tbody > tr > th{
+    width: 30%;
+}
+
+
+#ContainerUser{
+    width: 100%;
+}
+#ContainerUser > tbody {
+    padding: 10px 0;
+}
+#ContainerUser > tbody > tr >td {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    padding: 5px 0;
+}
+#ContainerUser tbody:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+
+
+
 .UserNameText{
     margin: 0;
 }
-.BoxBlockUpgradeUser{
-    
-}
+
 .BtnBlockUser{
-    width: 125px;
-    height: 43px;
-    padding: 10px;
     border: none;
-    border-radius: 5px;
     color: #fff;
-    font-size: 14px;
+    background-color: unset;
+    font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
     font-family: 'iranykan';
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: auto;
 }
 .BlockUserColortrue{
-    background-color: #1e8b0b;
+    color: #1e8b0b;
 }
 .BlockUserColorfalse{
-    background-color: #c81414;
+    color: #c81414;
 }
 
 
@@ -83,13 +88,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .BtnPagingUsers{
     padding: 5px 15px;
     margin: 5px;
     border-radius: 3px;
-    background-color: #141E46;
+    background-color: #EF4056;
     color: #fff;
     cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    #SubjectTable > tbody >tr > :nth-child(2) {
+        display: none;
+    }
+    #ContainerUser > tbody >tr > :nth-child(2) {
+        display: none;
+    }
+
+
 }

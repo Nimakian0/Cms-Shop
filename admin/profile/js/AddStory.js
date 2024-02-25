@@ -124,15 +124,40 @@ function SubAddStory () {
 }
 
 
+const BlurBox = document.querySelector(".BlurBox")
+const BoxDeleteStory = document.getElementById("BoxDeleteStory")
+const TrueIsDeleteStory = document.getElementById("TrueIsDeleteStory")
+const FalseIsDeleteStory = document.getElementById("FalseIsDeleteStory")
 
 window.DeleteStory = function DeleteStory (e) {
+    BlurBox.style.display ="unset";
+    BoxDeleteStory.style.display = "flex";
+    TrueIsDeleteStory.setAttribute("data-id" , e.target.getAttribute("data-id"));
+    document.body.style.overflow = "hidden"
+
+
+    
+}
+
+
+TrueIsDeleteStory.addEventListener('click',(e)=>{
     let StoryId = e.target.getAttribute("data-id")
     let FindIndexStory = AllStory.findIndex( Story =>{
         return Story.id == StoryId
     })
     AllStory.splice(FindIndexStory,1)
     UpdateLocalStorage(AllStory)
+    FalseIsDeleteStoryFun()
+})
+FalseIsDeleteStory.addEventListener('click',FalseIsDeleteStoryFun)
+
+
+function FalseIsDeleteStoryFun () {
+    BlurBox.style.display ="none";
+    BoxDeleteStory.style.display = "none";
+    document.body.style.overflow = "unset"
 }
+
 
 
 

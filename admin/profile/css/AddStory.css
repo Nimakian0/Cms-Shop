@@ -185,10 +185,71 @@
     border: none;
     outline: none;
     background-color: #cf0a0a;
-    padding: 8px 10px;
+    padding: 5px 10px;
     color: #fff;
     font-weight: bold;
+    font-size: 14px;
     border-radius: 8px;
     cursor: pointer;
+    font-family: "iranykan";
+}
+
+
+#BoxDeleteStory{
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 150px;
+    background-color: #ededed;
+    box-shadow: 0 0 5px 1px #ededed;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+#BoxDeleteStory > p{
+    margin: 0;
+}
+
+#TrueIsDeleteStory{
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
     font-size: 15px;
+}
+#FalseIsDeleteStory{
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 382px) {
+    .ImgStoryItem{
+        width: 150px;
+        height: 150px;
+    }
 }

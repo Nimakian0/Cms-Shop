@@ -48,7 +48,9 @@ function ControlBlockChat () {
     if(FindMessage.active){
         BlockTicket.style.display = "none"
         BoxInput.style.display = "flex"
+        BlockShowTicket.className = "fa-solid fa-ban"
     }else{
+        BlockShowTicket.className = "fa-solid fa-arrow-rotate-right"
         BoxInput.style.display = "none"
         BlockTicket.style.display = "flex"
     }
@@ -67,7 +69,7 @@ ExitShowTicket.addEventListener("click",()=>{
 const BlockShowTicket = document.getElementById("BlockShowTicket")
 BlockShowTicket.addEventListener("click",BlockChat)
 function BlockChat () {
-    FindMessage.active = false
+    FindMessage.active = !FindMessage.active
     UpdateLocalStorage()
     ControlBlockChat()
 }

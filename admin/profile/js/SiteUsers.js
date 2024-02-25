@@ -5,39 +5,41 @@ let AllUsers = JSON.parse(localStorage.getItem("Users"))
 
 
 
+let ContainerUser = document.getElementById("ContainerUser")
+let NumberPerPage = 4;
+let pageIndex = 1;
 
 const boxPagingUsers = document.getElementById("boxPagingUsers")
 function CreateBtnPaging () {
     let  NumberBtn = Math.ceil(AllUsers.length / NumberPerPage);
+    boxPagingUsers.innerHTML = ""
     for(let inerBtn = 1 ; inerBtn <= NumberBtn; inerBtn++ ){
         boxPagingUsers.insertAdjacentHTML("beforeend",`<p onclick="SetActivePageIndex(event);" class="BtnPagingUsers">${inerBtn}</p>`)
     }
+    const BtnPagingUsers = document.querySelectorAll(".BtnPagingUsers")
+    BtnPagingUsers.forEach(BtnPaging => {
+        BtnPaging.style.backgroundColor = "#ef4056"
+    })
+    BtnPagingUsers[pageIndex-1].style.backgroundColor = "#2DCEA2"
 }
 
 window.SetActivePageIndex = function SetActivePageIndex(event) {
     pageIndex = event.target.innerHTML
-    ShowUsers()
+    CreateBtnPaging()
+    AddToDom()
+
 }
 
 
 // 
-let BoxUser = document.getElementById("ulUsers")
-let NumberPerPage = 4;
-let pageIndex = 1;
-function ShowUsers () {
+
+
+function AddToDom (){
     let End = NumberPerPage * pageIndex;
     let Start = End - NumberPerPage;
     let ResultsliceItem = AllUsers.slice(Start,End)
-    
-    
+    ContainerUser.innerHTML ="";
 
-    AddToDom(ResultsliceItem)
-    
-    
-    
-}
-function AddToDom (ResultsliceItem){
-    BoxUser.innerHTML ="";
     ResultsliceItem.forEach(user => {
 
         let TextBtnBlockUser = null;
@@ -45,13 +47,21 @@ function AddToDom (ResultsliceItem){
 
         
 
-        BoxUser.insertAdjacentHTML("beforeend",`
-            <li>
-                <p class="UserNameText">${user.userName}</p>
-                <div class="BoxBlockUpgradeUser">
-                    <button onclick="toggleBlockUser(event);" class="BtnBlockUser BlockUserColor${user.Block}">${TextBtnBlockUser}</button> 
-                </div>
-            </li>
+        ContainerUser.insertAdjacentHTML("beforeend",`
+           
+
+            <tr>
+                <td>${user.userName}</td>
+                <td>${user.firstNamea+" "+user.lastName}</td> 
+                <td>
+                    
+                    <button data-name="${user.userName}" onclick="toggleBlockUser(event);" class="BtnBlockUser BlockUserColor${user.Block}">${TextBtnBlockUser}</button>
+                    
+                </td>
+            </tr>
+
+
+
         `)
         if(user.userName == "admin"){
             document.querySelector(".BtnBlockUser").style.cursor = "not-allowed"
@@ -63,8 +73,7 @@ function AddToDom (ResultsliceItem){
     
 
 window.toggleBlockUser = function toggleBlockUser(event) {
-    // console.log();
-    let UserNameCliked = event.target.parentNode.previousElementSibling.innerHTML;
+    let UserNameCliked = event.target.getAttribute("data-name");
     if(UserNameCliked != "admin"){
 
         let FindUserInAllUser = AllUsers.find((User)=>{
@@ -78,38 +87,24 @@ window.toggleBlockUser = function toggleBlockUser(event) {
 
 
 function UpdateUserLocalstorage () {
-    inputSearchUser.value = ""
     let PreviousUsersLocalstorage = JSON.parse(localStorage.getItem("Users"))
     PreviousUsersLocalstorage = AllUsers
     localStorage.setItem("Users",JSON.stringify(AllUsers))
 
-    ShowUsers()
+    AddToDom()
 }
 
 
 
 
-const SubSearch = document.getElementById("SubSearch")
-const inputSearchUser = document.getElementById("inputSearchUser")
-function SearchUser () {
-    console.log(inputSearchUser.value);
-
-    let ResaluSearch = AllUsers.filter(user=>{
-        return user.userName.includes(inputSearchUser.value)
-    })
-    if(ResaluSearch){
-
-        AddToDom(ResaluSearch)
-    }
-    
-    
-}
 
 
 
-SubSearch.addEventListener("click",SearchUser)
+
+
 window.addEventListener("load",CreateBtnPaging)
-window.addEventListener("load",ShowUsers)
+window.addEventListener("load",AddToDom)
+
 
 
 

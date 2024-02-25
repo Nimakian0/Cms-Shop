@@ -84,17 +84,37 @@ function SubAddSliderFun () {
 
 
 
+
+const BlurBox = document.querySelector(".BlurBox")
+const BoxDeleteSlider = document.getElementById("BoxDeleteSlider")
+const TrueIsDeleteSlide = document.getElementById("TrueIsDeleteSlide")
+const FalseIsDeleteSlide = document.getElementById("FalseIsDeleteSlide")
+
 window.DeleteSlide = function DeleteSlide (e) {
+    BlurBox.style.display ="unset";
+    BoxDeleteSlider.style.display = "flex";
+    document.body.style.overflow = "hidden"
+    TrueIsDeleteSlide.setAttribute("data-id" , e.target.getAttribute("data-id"));
+}
+
+
+
+TrueIsDeleteSlide.addEventListener("click",(e)=>{
     let IdSlide = e.target.getAttribute("data-id")
     let FindIndexSlide = AllSlid.findIndex(Slide =>{
         return Slide.id == IdSlide
     })
     AllSlid.splice(FindIndexSlide,1)
-    
     UpdateLocalStorage(AllSlid)
+    FalseIsDeleteStoryFun()
+})
+FalseIsDeleteSlide.addEventListener("click",FalseIsDeleteStoryFun)
+
+function FalseIsDeleteStoryFun () {
+    BlurBox.style.display ="none";
+    BoxDeleteSlider.style.display = "none";
+    document.body.style.overflow = "unset"
 }
-
-
 
 
 

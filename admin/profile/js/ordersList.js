@@ -3,7 +3,7 @@ window.customElements.define("menu-admin",menuAdmin)
 
 
 let AllUsers = JSON.parse(localStorage.getItem("Users"))
-const Profilecontent = document.querySelector(".Profilecontent")
+const ContainerAllOrder = document.getElementById("ContainerAllOrder")
 
 const NewTagContainerGroceries = document.createElement("div")
 NewTagContainerGroceries.className = "containerGroceries"
@@ -21,9 +21,6 @@ function AddOrdersToDom() {
             User.Orders.reverse()
             User.Orders.forEach((order)=>{
 
-                
-                
-                
                 const discountAmount = (order.Price * (order.Discount).replace('%', '')) / 100;
                 NewTagContainerGroceries.insertAdjacentHTML("beforeend",`
                 <div class="GroceriesItem" >
@@ -74,16 +71,28 @@ function AddOrdersToDom() {
             
 
 
-            Profilecontent.append(BoxOrderUserName);
-            Profilecontent.append(NewTagContainerGroceries.cloneNode(true)) 
+            ContainerAllOrder.append(BoxOrderUserName);
+            ContainerAllOrder.append(NewTagContainerGroceries.cloneNode(true)) 
         }
-        
-       
-
-
-
-
     });
+
+
+
+    if(ContainerAllOrder.children .length == 0){
+        ContainerAllOrder.insertAdjacentHTML("beforeend",`
+            <div id="EmptyItem">
+                <div id="TextEmptyItem">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>هیچ سفارش ای در اینجا یافت نشد.</p>
+                </div>
+                <a id="BoxShowAllProduct" href="../../groceries.html">نمایش محصولات</a>
+            </div> 
+        `)
+    }
+
+
+
+
 
     
 }
@@ -132,7 +141,7 @@ window.AcceptProduct = function AcceptProduct (e){
     UpdateLocalStorage(AllUsers)
 
 
-    e.target.style.backgroundColor = "#fff";
+    e.target.style.backgroundColor = "#f9f9f9";
     e.target.style.color = "green";
     e.target.style.fontStyle = "17px";
     e.target.style.cursor = "auto";

@@ -12,29 +12,34 @@
 <body>
     
     <div class="boxProfile">
-        <menu-admin></menu-admin>
+        <menu-admin src="SiteUsers.html"></menu-admin>
 
         <div class="Profilecontent">
             <h2 id="TextWelcomeToPage">به پنل مدریت خوش آمدید :)</h2>
-            <h3>لیست کاربران سایت :</h3>
-
-            <div id="SearchUser">
-                <input id="inputSearchUser" type="text">
-                <button id="SubSearch">جستجو<i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-
+            
+            
+            
             <div id="boxUsers">
-                <ul id="ulUsers">
-                    <!-- <li>
-                        <p class="UserNameText">Nima</p>
-                        <div class="BoxBlockUpgradeUser">
-                            <button class="BtnBlockUser">مسدود کردن</button> 
-                        </div>
-                        
-                    </li> -->
-                    
-                    
-                </ul>
+                <div id="HeaderboxUsers">
+                    <h3>اعضا</h3>
+                    <a href="CreateUser.html"><i class="fa-solid fa-user"></i>اضافه کردن عضو جدید</a>
+                </div>
+
+                
+                <table id="SubjectTable" >
+                    <tr>
+                        <th>نام نمایشی</th>
+                        <th>نام و نام خانوادگی</th> 
+                        <th>وضعیت</th>
+                    </tr>
+                    <table id="ContainerUser" >
+                       
+                    </table>
+                </table>
+
+                
+
+                
                 
                 <div id="boxPagingUsers">
                     <!-- <p class="BtnPagingUsers">1</p> -->

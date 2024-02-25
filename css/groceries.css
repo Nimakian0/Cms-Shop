@@ -140,3 +140,19 @@
     font-weight: 500;
     float: left ;
 }
+
+
+#BoxPaging{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.BtnPaging{
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ef4056;
+    color: #fff;
+    cursor: pointer;
+}

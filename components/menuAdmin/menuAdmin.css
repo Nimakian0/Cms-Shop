@@ -1,7 +1,11 @@
 .menuBox{
     width: 330px;
+    height: 90vh;
     box-sizing: border-box;
     position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #fff;
+    padding: 25px;
 }
 
 .menu-respansev-btn{
@@ -13,7 +17,8 @@
 .BoxLogoExitRespansev{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
 .exitMenuRespansevBtn{
@@ -27,17 +32,19 @@
     list-style-type: none;
     padding: 0;
 }
-.Ulmenu > li{
+.Ulmenu > a{
     padding: 10px 30px;
-    background-color: #141E46;
     margin: 10px 0;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
-.Ulmenu > li >i{
-    color: #c81414;
+.Ulmenu > a >i{
+    color: #515151;
 }
-.Ulmenu > li >a{
-    color: #fff;
+.Ulmenu > a >p{
+    color: #515151;
     text-decoration: none;
     cursor: pointer;
     margin: 0 10px;
@@ -50,6 +57,7 @@
 @media only screen and (max-width: 1000px) {
     .menuBox{
         position: unset;
+        padding: 0;
     }
     .menu{
         transition: all 1s;
@@ -82,6 +90,10 @@
     }
     .menuBox{
         width: auto;
+    }
+    .BoxLogoExitRespansev{
+        width: 80%;
+        justify-content: space-between;
     }
 
     

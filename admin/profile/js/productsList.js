@@ -66,7 +66,7 @@ const AddGroceriesBtn = document.getElementById("AddGroceriesBtn")
 
 const ContentAddGroceries = document.getElementById("ContentAddGroceries")
 function showAddGroceriesBox () {
-    ContentAddGroceries.style.height = "480px"
+    ContentAddGroceries.style.height = "550px"
 }
 
 const CancellAddGroceries = document.getElementById("CancellAddGroceries")
@@ -82,10 +82,6 @@ const SrsPhotoAddGroceries = document.getElementById("SrsPhotoAddGroceries")
 const TextPhotoAddGroceriesBtn = document.getElementById("TextPhotoAddGroceriesBtn")
 function IsUploadPhoto (e) {
     TextPhotoAddGroceriesBtn.innerHTML = e.target.files[0].name
-
-    console.log(e.target.files[0]);
-    // console.log(URL.createObjectURL(e.target.files[0].src));
-
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = () => {
@@ -125,7 +121,7 @@ function AddGroceries (e) {
     ErorBox.innerHTML = ErorBoxContent
 
 
-    console.log(ErorBox.innerHTML);
+    
 
     if(ErorBox.innerHTML == "<span>محصول با موفقیت اضافه شد</span>"){
 
@@ -206,27 +202,34 @@ function UpdateLocalStorage () {
 
 
 
+const BlurBox = document.querySelector(".BlurBox")
+const BoxDeleteProduct = document.getElementById("BoxDeleteProduct")
+const TrueIsDelete = document.getElementById("TrueIsDelete")
+const FalseIsDelete = document.getElementById("FalseIsDelete")
+window.DeleteProdoct = function DeleteProdoct(e){
+    BlurBox.style.display ="unset";
+    BoxDeleteProduct.style.display = "flex";
+    TrueIsDelete.setAttribute("data-id" , e.target.getAttribute("data-id"));
+    document.body.style.overflow = "hidden"
+}
 
-window.DeleteProdoct=function DeleteProdoct(e){
+TrueIsDelete.addEventListener("click",(e)=>{
     let Idproduct = e.target.getAttribute("data-id");
-
     let FindIndexProduct = AllProductsgroceries.findIndex(Product =>{
         return Product.id == Idproduct
     })
     AllProductsgroceries.splice(FindIndexProduct,1)
-
-
     AllProductsgroceries.reverse();
     UpdateLocalStorage()
+    FalseIsDeleteFun()
+})
+FalseIsDelete.addEventListener("click",FalseIsDeleteFun)
 
-
-    
+function FalseIsDeleteFun () {
+    BlurBox.style.display ="none";
+    BoxDeleteProduct.style.display = "none";
+    document.body.style.overflow = "unset"
 }
-
-
-
-
-
 
 
 

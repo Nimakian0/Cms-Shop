@@ -98,7 +98,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 30px 0;
-    width: 135px;
+    width: 170px;
 }
 #SubAddGroceries{
     padding: 8px;
@@ -112,7 +112,7 @@
     font-size: 15px;
 }
 #CancellAddGroceries{
-    padding: 8px;
+    padding: 8px 25px;
     cursor: pointer;
     font-family: "iranykan";
     background-color: red;
@@ -149,11 +149,13 @@
     width: 337px;
     height: 600px;
     text-decoration: none;
-    border: 1px solid #cfcfcf50;
     padding: 20px;
     margin: 10px;
     box-sizing: border-box;
     position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px #f5f5f5;
+    border: 1px solid #f5f5f5;
 }
 .SpecialSellBoxGroceriesItem{
     width: 60px;
@@ -269,6 +271,57 @@
     color: #fff;
     cursor: pointer;
 }
+
+
+#BoxDeleteProduct{
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 150px;
+    background-color: #ededed;
+    box-shadow: 0 0 5px 1px #ededed;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+#BtnBoxDeleteProduct > p{
+    margin: 0;
+}
+
+#TrueIsDelete{
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+#FalseIsDelete{
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: "iranykan";
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 540px) {

@@ -1,4 +1,4 @@
-/* section story Start */
+    /* section story Start */
 #storyBox{
     display: flex;
     align-items: center;
@@ -149,6 +149,14 @@
 @media only screen and (max-width: 500px) {
     #SliderBoxArrow{
         opacity: 1 !important;
+    }
+    #storyItem{
+        padding: 20px 20px;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .ImgItemServicesDigikala{
+        width: 65px !important;
     }
 }
 
@@ -347,6 +355,7 @@
 }
 .ImgProduct{
     width: 140px;
+    height: 140px;
 }
 .BoxPricrAndDiscountItemSpecialSale{
     display: flex;

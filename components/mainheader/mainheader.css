@@ -64,6 +64,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .boxUserinHeader{
     width: 100px;
@@ -206,7 +209,7 @@ header{
     #list{
        
 
-        position: absolute;
+        position: fixed;
         width: 100%;
         top: 0;
         bottom: 0;
