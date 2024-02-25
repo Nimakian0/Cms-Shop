@@ -92,7 +92,7 @@
 }
 
 #SubNewTicket{
-    padding: 4px 10px;
+    padding: 6px 20px;
     cursor: pointer;
     font-family: "iranykan";
     background-color: green;
@@ -103,10 +103,10 @@
     font-size: 15px
 }
 #ExitNewTicket{
-    padding: 4px 10px;
+    padding: 6px 20px;
     cursor: pointer;
     font-family: "iranykan";
-    background-color: red;
+    background-color: #c81414;
     outline: none;
     border: none;
     border-radius: 5px;

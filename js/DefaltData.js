@@ -4,6 +4,8 @@ const mainAdmin = {
     Orders:[],
     type:"Admin".toLowerCase(),
     Block:false,
+    firstNamea : "نیما",
+    lastName : "کیان"
 }
 let allUsers = JSON.parse(localStorage.getItem("Users")) || []
 const findAdminData = allUsers.find(userData => {

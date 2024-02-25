@@ -48,11 +48,13 @@ btnSubSingUpUser.addEventListener("click",e=>{
     }else{
         errorBox.innerHTML = ""
         let newUser = {
-            userName: userNameInput.value.toLowerCase(),
-            password:passwordInput.value.toLowerCase(),
+            firstNamea : "",
+            lastName : "",
+            userName : userNameInput.value.toLowerCase(),
+            password : passwordInput.value.toLowerCase(),
             Orders : [],
-            type:"User",
-            Block:false, 
+            type : "User",
+            Block : false, 
             tickets : [
                 
             ]

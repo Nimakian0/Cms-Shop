@@ -13,13 +13,16 @@ const BoxEroor = document.getElementById("BoxEroor")
 let UserName = document.getElementById("UserName")
 let Password = document.getElementById("Password")
 let RepeatPassword = document.getElementById("RepeatPassword")
+const FirstName = document.getElementById("FirstName")
+const LastName = document.getElementById("LastName")
 
 
 function UserDate (){
     UserName.value = document.cookie.substring(document.cookie.indexOf("=")+1);
     Password.value = FindUser.password
     RepeatPassword.value = FindUser.password
-    
+    FirstName.value = FindUser.firstNamea
+    LastName.value = FindUser.lastName
 }
 
 
@@ -46,12 +49,36 @@ CancellAccountDetails.addEventListener('click',UserDate)
 let SubAccountDetails = document.getElementById("SubAccountDetails")
 SubAccountDetails.addEventListener("click",()=>{
     BoxEroor.style.opacity = "1"
+    BoxEroor.innerHTML = ""
     if(Password.value != RepeatPassword.value){
-        BoxEroor.innerHTML = "<p>رمز عبور و تکرار آن یکسان نمی باشد !</p>"
-    }else{
+        BoxEroor.innerHTML += "<p>رمز عبور و تکرار آن یکسان نمی باشد !</p>"
+    }
+    if(UserName.value == ""){
+        BoxEroor.innerHTML += "<p>نام نمایشی نمیتواند خالی باشد !</p>"
+    }
+
+
+    const DuplicateUserName = AllUser.find(User => {
+        return User.userName == UserName.value
+    })
+
+    if(DuplicateUserName != undefined && UserName.value != FindUser.userName ){
+        BoxEroor.innerHTML += "<p>نام نمایشی از قبل وجود دارد !</p>"
+    }
+
+    if(Password.value == "" || RepeatPassword.value == "" ){
+        BoxEroor.innerHTML += "<p>رمز عبور ای وارد نشده !</p>"
+    }
+
+
+    
+    
+    if(BoxEroor.innerHTML == ""){
         BoxEroor.innerHTML = "<span>مشخصات شما با موفقیت بروز شد .</span>"
         FindUser.userName = UserName.value.toLowerCase()
         FindUser.password = Password.value.toLowerCase()
+        FindUser.firstNamea = FirstName.value
+        FindUser.lastName = LastName.value
         UpdateLocalStorage()
     }
     ResetBoxEroor()
@@ -66,7 +93,7 @@ function UpdateLocalStorage () {
 function ResetBoxEroor () {
     setTimeout(()=>{
         BoxEroor.style.opacity = "0"
-    },3000)
+    },4000)
 }
 
 

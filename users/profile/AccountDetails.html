@@ -14,25 +14,41 @@
 
 
     <div class="boxProfile">
-        <menu-user></menu-user>
+        <menu-user src="AccountDetails.html"></menu-user>
 
         <div class="Profilecontent">
             
             
             <div id="BoxAccountDetails">
 
-                <h4>ویرایش حساب کاربری</h4>
+                <h3>ویرایش حساب کاربری</h3>
 
-                <div class="containerInput">
-                    <label for="">نام کاربری</label>
-                    <div id="BoxInputUserName"  class="BoxInputAndI">
-                        <input class="input" id="UserName" type="text" >
-                        <i class="fa-regular fa-user i"></i>
+                <div id="BoxFirstNameaAndLastName">
+
+                    <div id="BoxFirstName">
+                        <label for="">نام</label>
+                        <input class="input" id="FirstName" type="text" placeholder="نام خود را وارد کنید" >
                     </div>
+
+                    <div id="BoxLastName">
+                        <label for="">نام خانوادگی</label>
+                        <input class="input" id="LastName" type="text" placeholder="نام خانوادگی خود را وارد کنید" >
+                    </div>
+
                 </div>
 
+                
                 <div class="containerInput">
-                    <label for="">رمز عبور</label>
+                    <label for="">نام نمایشی</label>
+                    <input class="input" id="UserName" type="text">
+                </div>
+                
+
+
+
+
+                <div class="containerInput">
+                    <label for="">رمز عبور جدید</label>
                     <div class="BoxInputAndI" id="BoxPassword">
                         <input class="input" id="Password" type="password" >
                         <i onclick="showPassword(event)" class="fa-regular fa-eye-slash showPassword i"></i>
@@ -47,6 +63,9 @@
                     </div>
                 </div>
                     
+
+
+                
                 <div id="BoxEroor">
                    
                 </div>

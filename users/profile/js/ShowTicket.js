@@ -60,13 +60,6 @@ ExitShowTicket.addEventListener("click",()=>{
 })
 
 
-const BlockShowTicket = document.getElementById("BlockShowTicket")
-BlockShowTicket.addEventListener("click",BlockChat)
-function BlockChat () {
-   Findticket.active = false
-   UpdateLocalStorage()
-   ControlBlockChat()
-}
 
 
 
@@ -80,12 +73,14 @@ function ResetInput () {
 const SendMessageTicket = document.getElementById("SendMessageTicket")
 SendMessageTicket.addEventListener("click",SendTicket)
 function SendTicket () {
-    const NewMassage = {
-        sender: "User",
-        Text : InputMessageTicket.value
+    if(InputMessageTicket.value != ""){
+        const NewMassage = {
+            sender: "User",
+            Text : InputMessageTicket.value
+        }
+        Findticket.Messages.push(NewMassage)
+        UpdateLocalStorage()
     }
-    Findticket.Messages.push(NewMassage)
-    UpdateLocalStorage()
 }
 
 

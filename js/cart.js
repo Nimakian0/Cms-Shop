@@ -228,7 +228,7 @@ function setorder() {
         })
         FindUserLogin.Orders = PreviousOrders
 
-
+        
         
 
         setorderInLocalstorage(AllUsers)
@@ -255,6 +255,10 @@ function DeleteCart(){
 
 function ShowSuccessMessage () {
     let SuccessMessage = document.getElementById("SuccessMessage")
+    SuccessMessage.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    })
     SuccessMessage.style.right = "0%"
     setTimeout(()=>{
         SuccessMessage.style.right = "-100%"
